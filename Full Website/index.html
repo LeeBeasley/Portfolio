@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Full Website/CSS/index.css">
+    <div class="navbar">
+        <link rel="stylesheet" href="../full website/CSS/Full_website css.css">
+        <a href="#home" class="home-link">Home</a>
+        <a href="#Slideshow" class="Slideshow">Slideshow</a>
+        <a href="#about-section" class="about-link">About</a>
+        <a href="#contact-section" class="contact-link">Contact</a>
+        <a href="#github-section" class="github-link">Github</a>
+    </div>
+    
+</head>
+<body>
+    <!-- Background Video-->
+    <div class="video-container">
+        <video autoplay loop muted playsinline>
+        <link rel="stylesheet" href="../Full Website/CSS/index.css">
+            <source src="./images/pexels_videos_1326864 (1080p).mp4" type="video/MP4">
+    Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="video-overlay">
+        <h1 class="white-text">Tech Academy's Portfolio</h1>
+        <p class="column-text_1">  
+            <q>The function of education is to teach one to think intensively and to think critically. <br> plus character-that is the goal of true education</q> 
+            </br>-Martin Luther King Jr.<br>
+            <br> 
+            My name is Leshawn. Welcome to my portfolio website. On it, I will tell you about my background, goals, and experience.
+    </div>
+
+    <!--Slide Show-->
+    <div id="Slideshow" class="slideshow-container">
+        <div class="mySlides">
+            <img src="../Full Website/images/AI 5.jpg" style="width:100%">
+            <div class="slide-text">I'm available to assist you with your Data projects!</div>
+        </div>
+        <div class="mySlides">
+            <img src="../Full Website/images/SQL.png" style="width:100%">
+            <div class="slide-text">I'm a Data Scientist, trained in Structured query language(SQL).</div>
+        </div>
+        <div class="mySlides">
+            <img src="../Full Website/images/dataviz.jpg" style="width:100%">
+            <div class="slide-text">data visualization tools,</div>
+        </div>
+        <div class="mySlides">
+            <img src="../Full Website/images/Machine_learning.png" style="width:100%">
+            <div class="slide-text">machine learning, etc.</div>
+        </div>
+    <br>
+    
+        <!-- Left and right arrows -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <div class="row">
+        <!-- About Section -->
+        <div class="column" id="about-section">
+            <img class="zoomable" src="../Full Website/images/Kenti1.png" alt="Kenti 1">
+            <div class="text-block">
+                <h1 class="about-title">ABOUT</h1>
+                <p class="column-text_2">I am a future Data Scientist currently enrolled in the Data Science Bootcamp at
+                    <a href="https://www.learncodinganywhere.com">Tech Academy</a>. I enjoy working out and spending time with my dog.</p>
+            </div>
+        </div>
+
+        <!-- GitHub Section -->
+        <div class="column" id="github-section">
+            <img class="zoomable" src="../Full Website/images/Kenti2.png" alt="Kenti 2">
+            <div class="text-block">
+                <h1 class="github-title">GitHub</h1>
+                <p class="column-text_3">I am excited to obtain a role in Data Science and increase the representation of African-Americans in Tech. You can view my coding projects. <a href="https://github.com/LeeBeasley/HTML-and-CSS-Projects">GitHub</a></p>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="column" id="contact-section">
+            <img class="zoomable" src="../Full Website/images/Kenti3.png" alt="Kenti 3">
+            <div class="text-block">
+                <h1 class="contact-title">Contact</h1>
+                <!-- Button to open the contact form popup -->
+                <button id="openFormButton" class="submit-style">Contact Me</button>
+            </div>
+        
+            <!-- The Popup Form -->
+            <div id="popupForm" class="form-popup" style="display: none;">
+                <!-- Contact Form -->
+                <form action="https://formspree.io/f/xpzvjrzz" method="POST">
+                    <label for="fname">First Name:</label><br>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="lname">Last Name:</label><br>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message"></textarea><br><br>
+                    <input type="submit" value="Submit" class="submit-style">
+                    <button type="button" onclick="closePopup()" class="submit-style">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="../Full Website/JS/index.js"></script>
+</body>
+<!-- FOOTER-->
+<footer class="footer">
+    <p>Copyright &copy;2024 | Leshawn Beasley</p>
+    </footer>
+<!-- END OF FOOTER-->
+</html>

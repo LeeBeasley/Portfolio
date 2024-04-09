@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto:wght@400&display=swap');
+
+.home-link {
+    color: gold;  
+}
+.about-link {
+    color: red;  
+}
+
+.contact-link {
+    color: green;  
+}
+
+.github-link {
+    color: blue;  
+}
+/* The navigation bar */
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed; /* Set the navbar to fixed position */
+    height: 40px;
+    top: 0; /* Position the navbar at the top */
+    width: 100%; /* Full width */
+    z-index: 1;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s; 
+}
+
+/* Fade in, drop down effect*/
+
+@keyframes dropdownFadeIn {
+    0%{
+     opacity: 0;
+     transform: translateY(-100%);
+     animation-duration: 3s;
+}
+
+100% {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    display: block;
+    width: 25%; /* This makes each link take up 1/4 of the navbar */
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 3.5s ease-in forwards;
+}
+
+/* Change background on mouse-over */
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+    height: 40px;
+}
+
+/*VIDEO SECTION*/
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin-top: 3%;
+}
+
+P {
+    padding-left: 5%;
+}
+
+
+.video-container {
+    position: relative;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding-bottom: 20;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translate(-50%);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white ;
+    font-size: 30px;
+    font-style: oblique;
+    text-align: left;
+    padding: 7px;
+    background-color: rgba(0, 0, 0, 0.7);  
+    transition: transform 0.5s ease, color 0.5s ease;
+    opacity: 0;
+    animation: dropdownFadeIn 2s ease-in forwards;
+}
+/* All content to adjust to different screen sized*/
+.video-overlay:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    color: gold;
+}
+
+.video-overlay h1 {
+    font-size: 4vw;
+}
+
+.video-overlay p {
+    font-size: 2vw;
+}
+
+@media (max-width: 600px) {
+    .video-overlay h1 {
+        font-size: 5vw;
+    }
+
+    .video-overlay p {
+        font-size: 3vw;
+    }
+}
+/* Fade in Effect*/
+@keyframes fadeIn {
+    from {
+    opacity: 0;
+}
+to {
+    opacity: 1;
+}
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  
+  .column {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+
+  
+  .text-block {
+    background-color: rgba(100, 65, 0, .3);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: -10px; 
+    box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.5);
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+    text-align: center;
+  }
+  
+/* Slideshow container */
+.slideshow-container {
+    max-width: 500px;  
+    position: relative;
+    margin: auto;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);  
+    padding: 20px;
+    border-radius: 15px;    
+  }
+  
+  /* Hide the images */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }      
+
+  .slide-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    color: white;
+    width: 95%;
+    text-align: center;
+    padding: 5px 0; /* Add some padding */
+    font-family: 'Oswald', sans-serif;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+
+.column-text_1:hover {
+    color: #3498db; /* Change color on hover */
+    transition: color 0.5s ease; /* Smooth transition for color change */
+    text-wrap: none;
+
+}
+
+/* Additional styling for your form elements to make them dynamic */
+
+.contact-container {
+    padding-bottom: 0;
+}
+
+
+.about-title:hover {
+    color: gold; /* Change text color on hover */
+    text-shadow: 2px 2px 4px #000000; /* Add text shadow on hover */
+}
+
+.github-title:hover {
+    color: red;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.contact-title:hover {
+    color: green;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.submit-style {
+    background-color: blue; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+.submit-style:hover {
+    background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+/* Container styling for the popup */
+.form-popup {
+    position: fixed; /* Fixed position makes the popup stay in place while scrolling */
+    right: 0; /* Aligns the popup to the right edge of the viewport */
+    top: 50%; /* Starts at the middle of the screen vertically */
+    transform: translateY(-50%);  
+    width: 300px;  
+    background-color: white;  
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); / 
+    border-radius: 5px;  
+    z-index: 1000;  
+    padding: 20px;  
+    box-sizing: border-box;  
+}
+
+/* Container styling for the popup */
+.form-popup {
+    position: fixed; 
+    right: 10%; /* Adjusted for right alignment */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px; /* Reduced width for a smaller popup */
+    background-color: #f8f8f8; /* Off-white background color */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+/* Form styling within the popup */
+.form-popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-popup label {
+    margin-bottom: 5px;
+    color: black; /* Ensuring label text is visible against the off-white background */
+}
+
+.form-popup input[type="text"],
+.form-popup input[type="email"],
+.form-popup textarea,
+.form-popup input[type="submit"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white; /* Ensuring a white background for input fields */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for input fields */
+.form-popup input[type="text"]:hover,
+.form-popup input[type="email"]:hover,
+.form-popup textarea:hover,
+.form-popup input[type="submit"]:hover {
+    background-color: lightgrey; /* Light grey background on hover */
+}
+
+/* Button styling within the popup */
+* Styling for the popup container */
+.form-popup {
+    position: fixed; 
+    right: 10%; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    background-color: gold; /* Or any color you prefer for the popup background */
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: inherit;
+    overflow: auto;
+}
+
+/* Existing styles for form elements inside the popup... */
+
+/* Styling for the popup container */
+.form-popup {
+    position: fixed; 
+    right: 0; /* Align to the right edge of the webpage */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 225px; 
+    background-color: wheat; /* Or any color you prefer for the popup background */
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 15px; /* Adjust padding if necessary */
+    box-sizing: border-box;
+    font-family: inherit;
+    overflow: auto;
+}
+
+/* Additional specific styling for the submit button */
+.form-popup input[type="submit"] {
+    background-color: blue;
+    color: white;
+    border:solid, 20px;
+    padding: 10px; /* Adjust padding to scale with the button size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-popup input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+    text-align: center;
+}
